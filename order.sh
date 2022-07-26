@@ -1,106 +1,108 @@
 #!/bin/sh
 read -p "file to order: --> " fetching_keyword
 
-mypath=/mnt/c/Users/alber/Desktop/testfileorder/auto_folder_$fetching_keyword/
+mypath=./auto_folder_$fetching_keyword/
+
+current_folder=.
 
 echo $mypath
 
 mkdir -p $mypath
 
-find /mnt/c/Users/alber/Desktop/testfileorder -iname "*${fetching_keyword}*" \
+find . -iname "*${fetching_keyword}[-_]*" \
  -exec mv -n {} "${mypath}" \;
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_python
+# mkdir -p $current_folder/auto_folder_python
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'python.' | 
-xargs -0 -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_python
+# ls $cur | rcurrent_folder
+# egrep -i 'python.' | 
+# xargs -0 -I 'rcurrent_folder{}' mv -n '{}' $cur/auto_folder_python
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_javascript
+# mkdir -p $current_folder/auto_folder_javascript
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'javascript.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_javascript
+# ls $cur | rcurrent_folder
+# egrep -i 'javascript.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_javascript
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_java
+# mkdir -p $current_folder/auto_folder_java
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'java .' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_java
-
-
-
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_agile
-
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'agile.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_agile
-
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_devOps
-
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'devops.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_devOps
-
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_business
-
-ls /mnt/c/Users/alber/Desktop/testfileorder | egrep -i 'business.' | xargs -0 -I '{}' mv '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_business
-
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_php
-
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'php.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_php
+# ls $cur | rcurrent_folder
+# egrep -i 'java .' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_java
 
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'software development.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
+# mkdir -p $current_folder/auto_folder_agile
 
-ls /mnt/c/Users/alber/Desktop/testfileorder |
-egrep -i 'software .' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
+# ls $cur | rcurrent_folder
+# egrep -i 'agile.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_agile
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'web developer.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
+# mkdir -p $current_folder/auto_folder_devOps
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'web development.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
+# ls $cur | rcurrent_folder
+# egrep -i 'devops.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_devOps
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'website.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
+# mkdir -p $current_folder/auto_folder_business
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'web.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_softwareDevelopment
+# ls $cur | egrrcurrent_folderep -i 'business.' | xargs -0 -I '{}' mv '{}' $cur/auto_folder_business
+
+# mkdir -p $current_folder/auto_folder_php
+
+# ls $cur | rcurrent_folder
+# egrep -i 'php.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_php
 
 
+# mkdir -p $current_folder/auto_folder_softwareDevelopment
+
+# ls $cur | rcurrent_folder
+# egrep -i 'software development.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_softwareDevelopment
+
+# ls $cur |rcurrent_folder
+# egrep -i 'software .' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_softwareDevelopment
+
+# ls $cur | rcurrent_folder
+# egrep -i 'web developer.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_softwareDevelopment
+
+# ls $cur | rcurrent_folder
+# egrep -i 'web development.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_softwareDevelopment
+
+# ls $cur | rcurrent_folder
+# egrep -i 'website.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_softwareDevelopment
+
+# ls $cur | rcurrent_folder
+# egrep -i 'web.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_softwareDevelopment
 
 
 
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_refactoring
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'refactoring.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_refactoring
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_uml
+# mkdir -p $current_folder/auto_folder_refactoring
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'uml.' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_uml
+# ls $cur | rcurrent_folder
+# egrep -i 'refactoring.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_refactoring
 
-mkdir -p /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_design
+# mkdir -p $current_folder/auto_folder_uml
 
-ls /mnt/c/Users/alber/Desktop/testfileorder | 
-egrep -i 'design' | 
-xargs -I '{}' mv -n '{}' /mnt/c/Users/alber/Desktop/testfileorder/auto_folder_design
+# ls $cur | rcurrent_folder
+# egrep -i 'uml.' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_uml
+
+# mkdir -p $current_folder/auto_folder_design
+
+# ls $cur | rcurrent_folder
+# egrep -i 'design' | 
+# xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_design
 
 # utile come spunto
 # dir1=""
