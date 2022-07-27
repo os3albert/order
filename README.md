@@ -2,7 +2,7 @@
   <img src="https://github.com//os3albert/order/blob/master/order.jpg?raw=true" alt="organize logo">
 </p>
 
-![screenshot](https://github.com//os3albert/order/blob/master/order.jpg?raw=true)
+![screenshot](https://files.catbox.moe/l3qe4q.jpg)
 
 
 ---
