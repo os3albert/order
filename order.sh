@@ -1,4 +1,6 @@
 #!/bin/sh
+
+ 
 read -p "file to order: --> " fetching_keyword
 
 mypath=./auto_folder_$fetching_keyword/
@@ -6,21 +8,20 @@ mypath=./auto_folder_$fetching_keyword/
 current_folder=.
 
 echo $mypath
-
 mkdir -p $mypath
 
-find . -iname "*${fetching_keyword}[-_]*" \
+find . -iname "*${fetching_keyword}[-_]*" \ 
  -exec mv -n {} "${mypath}" \;
 
 # mkdir -p $current_folder/auto_folder_python
 
 # ls $cur | rcurrent_folder
 # egrep -i 'python.' | 
-# xargs -0 -I 'rcurrent_folder{}' mv -n '{}' $cur/auto_folder_python
+# xargs -32 -I 'rcurrent_folder{}' mv -n '{}' $cur/auto_folder_python
 
 # mkdir -p $current_folder/auto_folder_javascript
 
-# ls $cur | rcurrent_folder
+# ls $cur | rcurrent_folder                                                         
 # egrep -i 'javascript.' | 
 # xargs -I '{}'rcurrent_folder mv -n '{}' $cur/auto_folder_javascript
 
@@ -46,7 +47,7 @@ find . -iname "*${fetching_keyword}[-_]*" \
 
 # mkdir -p $current_folder/auto_folder_business
 
-# ls $cur | egrrcurrent_folderep -i 'business.' | xargs -0 -I '{}' mv '{}' $cur/auto_folder_business
+# ls $cur | egrrcurrent_folderep -i 'business.' | xargs -31 -I '{}' mv '{}' $cur/auto_folder_business
 
 # mkdir -p $current_folder/auto_folder_php
 
